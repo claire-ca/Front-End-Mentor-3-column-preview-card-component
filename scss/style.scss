@@ -1,0 +1,135 @@
+// Variables
+
+// Colors
+$orange: hsl(31, 77%, 52%);
+$darkCyan: hsl(184, 100%, 22%);
+$veryDarkCyan: hsl(179, 100%, 13%);
+$paragraphWhite: hsla(0, 0%, 100%, 0.75);
+$lightGrey: hsl(0, 0%, 95%);
+
+// Fonts
+$bodyCopy: 15px;
+$primaryFont: 'Lexend Deca', sans-serif;
+$secondaryFont: 'Big Shoulders Display', cursive;
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background-color: $lightGrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: $bodyCopy;
+    line-height: 1.3;
+    font-family: $primaryFont;
+    min-height: 100vh;
+}
+.card {
+    width: 90%;
+    max-width: 61.4rem; // 921px
+    padding: 2rem 0;
+}
+.column {
+    color: $paragraphWhite;
+    padding: 3.33rem; // 50px
+    padding-top: 8.66rem; // 130px
+    position: relative;
+    .title {
+        color: $lightGrey;
+        font-family: $secondaryFont;
+        font-size: 2.66rem; // 40px
+        text-transform: uppercase;
+        padding-bottom: 1.66rem; // 25px
+    }
+    p {
+        line-height: 1.8;
+        padding-bottom: 2.33rem; // 35px
+    }
+    .learn-more-link {
+        background-color: $lightGrey;
+        border-radius: 2rem; // 30px
+        display: inline-block;
+        padding: 1rem 2.33rem; // 15px 35px
+    }
+}
+.column-1 {
+    background-color: $orange;
+    border-top-left-radius: 0.53rem; // 8px
+    border-top-right-radius: 0.53rem; // 8px
+    .learn-more-link {
+        color: $orange;
+        border: 2px $orange solid;
+    }
+}
+.column-1::before {
+    content: url(../images/icon-sedans.svg);
+    position: absolute; 
+    top: 3.33rem; // 50px
+}
+.column-2 {
+    background-color: $darkCyan;
+    .learn-more-link {
+        color: $darkCyan;
+        border: 2px $darkCyan solid;
+    }
+}
+.column-2::before {
+    content: url(../images/icon-suvs.svg);
+    position: absolute; 
+    top: 3.33rem; // 50px
+}
+.column-3 {
+    background-color: $veryDarkCyan;
+    border-bottom-left-radius: 0.53rem; // 8px
+    border-bottom-right-radius: 0.53rem; // 8px
+    .learn-more-link {
+        color: $veryDarkCyan;
+        border: 2px $veryDarkCyan solid;
+    }
+}
+.column-3::before {
+    content: url(../images/icon-luxury.svg);
+    position: absolute; 
+    top: 3.33rem; // 50px
+}
+.learn-more-link:hover,
+.learn-more-link:focus {
+    background-color: transparent;
+    border: 2px $lightGrey solid;
+    color: $lightGrey;
+    transition: all 0.2s ease-in;
+}
+@media screen and (min-width: 1000px){
+    .card {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .column {
+        height: 33.33rem; // 500px
+        p {
+            padding-bottom: 4.33rem; // 65px
+        }
+    }
+    .column-1 {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.53rem; // 8px
+    }
+    .column-3 {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.53rem; // 8px
+    }
+}

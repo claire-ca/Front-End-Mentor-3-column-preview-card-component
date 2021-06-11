@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-3column-preview-card-built-using-flexbox-and-sass-U-jzqIN13](https://www.frontendmentor.io/solutions/responsive-3column-preview-card-built-using-flexbox-and-sass-U-jzqIN13)
 - Live Site URL: [https://front-end-mentor-3-column-preview-card-component.vercel.app/](https://front-end-mentor-3-column-preview-card-component.vercel.app/)
 
 ## My process
